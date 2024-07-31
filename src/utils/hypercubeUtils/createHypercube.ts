@@ -1,6 +1,5 @@
 import { useCanvasStore } from 'canvasStore';
 import { drawLine } from 'utils/canvasUtils/drawLine';
-import { createCube } from 'utils/hypercubeUtils/createCube';
 import { createCube4 } from 'utils/hypercubeUtils/createCube4';
 import { createSquare } from 'utils/hypercubeUtils/createSquare';
 
@@ -8,15 +7,15 @@ export const createHypercube = () => {
   const { context } = useCanvasStore.getState();
   if (!context) return;
 
-  const square = createSquare({ x: 50, y: 650 });
-  const cube = createCube(square, 50);
-  const cube4 = createCube4(cube, 25, 75);
-  const cube5 = createCube4(cube4, 180, 50);
-  const cube6 = createCube4(cube5, -30, 250);
-  const cube7 = createCube4(cube6, 300, 0);
-  const cube8 = createCube4(cube7, 150, 100);
+  let hypercube = createSquare({ x: 50, y: 650 });
+  hypercube = createCube4(hypercube, 50, 50);
+  hypercube = createCube4(hypercube, 25, 75);
+  hypercube = createCube4(hypercube, 180, 50);
+  hypercube = createCube4(hypercube, -30, 250);
+  hypercube = createCube4(hypercube, 300, 0);
+  hypercube = createCube4(hypercube, 150, 100);
 
-  cube8.forEach((line) => {
+  hypercube.forEach((line) => {
     const point0 = line[0];
     const point1 = line[1];
     drawLine(context, point0, point1);

@@ -1,7 +1,7 @@
 import { SQUARE_SIZE } from 'constants/cubeConstants';
-import { Point, Square } from 'types/cubeTypes';
+import { GeometricObject, Point } from 'types/cubeTypes';
 
-export const createSquare = ({ x, y }: Point): Square => {
+export const createSquare = ({ x, y }: Point): GeometricObject => {
   const sq = SQUARE_SIZE;
   return [
     [

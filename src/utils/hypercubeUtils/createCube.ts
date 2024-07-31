@@ -1,6 +1,6 @@
-import { Square } from 'types/cubeTypes';
+import { GeometricObject } from 'types/cubeTypes';
 
-export const createCube = (square: Square, delta: number) => {
+export const createCube = (square: GeometricObject, delta: number) => {
   const cube = structuredClone(square);
 
   square.forEach((line) => {

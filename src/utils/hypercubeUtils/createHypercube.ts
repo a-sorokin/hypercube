@@ -14,6 +14,11 @@ export const createHypercube = () => {
   hypercube = createCube4(hypercube, -30, 250);
   hypercube = createCube4(hypercube, 300, 0);
   hypercube = createCube4(hypercube, 150, 100);
+  // hypercube = createCube4(hypercube, 150, -100);
+  // hypercube = createCube4(hypercube, 150, -100);
+  // hypercube = createCube4(hypercube, 50, 100);
+  // hypercube = createCube4(hypercube, 150, 100);
+  // hypercube = createCube4(hypercube, 150, -100);
 
   hypercube.forEach((line) => {
     const point0 = line[0];

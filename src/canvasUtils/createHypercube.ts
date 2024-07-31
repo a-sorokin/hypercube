@@ -1,7 +1,8 @@
 import { useCanvasStore } from 'canvasStore';
+import { createSquare } from 'canvasUtils/createSquare';
 
 const initCanvas = (context: CanvasRenderingContext2D) => {
-  context.strokeStyle = '#d6d6d6';
+  context.strokeStyle = '#fff';
   context.lineWidth = 1;
   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 };
@@ -14,10 +15,9 @@ export const createHypercube = () => {
   if (!context) return;
   setContext(context || undefined);
   initCanvas(context);
-
   context.beginPath();
-  context.moveTo(50, 50);
-  context.lineTo(200, 200);
+
+  createSquare(context, { x: 20, y: 650 });
 
   context.stroke();
 };

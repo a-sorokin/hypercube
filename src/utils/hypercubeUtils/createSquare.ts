@@ -1,32 +1,24 @@
 import { SQUARE_SIZE } from 'constants/cubeConstants';
 import { Point, Square } from 'types/cubeTypes';
-import { drawLine } from 'utils/canvasUtils/drawLine';
 
-export const createSquare = (context: CanvasRenderingContext2D, { x, y }: Point) => {
-  const square: Square = [
+export const createSquare = ({ x, y }: Point): Square => {
+  const sq = SQUARE_SIZE;
+  return [
     [
       { x, y },
-      { x: x + SQUARE_SIZE, y },
+      { x: x + sq, y },
     ],
     [
+      { x: x + sq, y },
+      { x: x + sq, y: y - sq },
+    ],
+    [
+      { x: x + sq, y: y - sq },
+      { x, y: y - sq },
+    ],
+    [
+      { x, y: y - sq },
       { x, y },
-      { x, y: y - SQUARE_SIZE },
-    ],
-    [
-      { x, y: y - SQUARE_SIZE },
-      { x: x + SQUARE_SIZE, y: y - SQUARE_SIZE },
-    ],
-    [
-      { x: x + SQUARE_SIZE, y: y - SQUARE_SIZE },
-      { x: x + SQUARE_SIZE, y },
     ],
   ];
-
-  // return square;
-
-  square.forEach((line) => {
-    const point0 = line[0];
-    const point1 = line[1];
-    drawLine(context, point0, point1);
-  });
 };

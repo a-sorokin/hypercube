@@ -10,6 +10,7 @@ const CANVAS_SIZE = 700;
 export const Canvas = () => {
   const ref = useRef<HTMLCanvasElement>(null);
   const setCanvas = useCanvasStore((state) => state.setCanvas);
+  const setContext = useCanvasStore((state) => state.setContext);
 
   useEffect(() => {
     if (ref && ref.current) setCanvas(ref.current);
@@ -17,8 +18,11 @@ export const Canvas = () => {
     createHypercube();
     drawElements();
 
-    return () => setCanvas(undefined);
-  }, [setCanvas]);
+    return () => {
+      setCanvas(undefined);
+      setContext(undefined);
+    };
+  }, [setCanvas, setContext]);
 
   return <canvas className={styles.canvas} ref={ref} width={CANVAS_SIZE} height={CANVAS_SIZE} />;
 };

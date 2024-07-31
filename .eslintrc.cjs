@@ -7,6 +7,6 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    'no-console': 'warn',
+    'no-console': 'error',
   },
 };

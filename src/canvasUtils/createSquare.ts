@@ -22,6 +22,8 @@ export const createSquare = (context: CanvasRenderingContext2D, { x, y }: Point)
     ],
   ];
 
+  // return square;
+
   square.forEach((line) => {
     const point0 = line[0];
     const point1 = line[1];

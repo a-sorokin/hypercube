@@ -5,10 +5,9 @@ import { drawElements } from 'utils/canvasUtils/drawElements';
 import { initCanvas } from 'utils/canvasUtils/initCanvas';
 import { createHypercube } from 'utils/hypercubeUtils/createHypercube';
 
-const CANVAS_SIZE = 700;
-
 export const Canvas = () => {
   const ref = useRef<HTMLCanvasElement>(null);
+
   const setCanvas = useCanvasStore((state) => state.setCanvas);
   const setContext = useCanvasStore((state) => state.setContext);
 
@@ -24,5 +23,5 @@ export const Canvas = () => {
     };
   }, [setCanvas, setContext]);
 
-  return <canvas className={styles.canvas} ref={ref} width={CANVAS_SIZE} height={CANVAS_SIZE} />;
+  return <canvas className={styles.canvas} ref={ref} width={window.innerWidth} height={window.innerHeight} />;
 };

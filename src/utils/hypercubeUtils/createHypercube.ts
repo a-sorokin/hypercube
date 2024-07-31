@@ -11,8 +11,12 @@ export const createHypercube = () => {
   const square = createSquare({ x: 50, y: 650 });
   const cube = createCube(square, 50);
   const cube4 = createCube4(cube, 25, 75);
+  const cube5 = createCube4(cube4, 180, 50);
+  const cube6 = createCube4(cube5, -30, 250);
+  const cube7 = createCube4(cube6, 300, 0);
+  const cube8 = createCube4(cube7, 150, 100);
 
-  cube4.forEach((line) => {
+  cube8.forEach((line) => {
     const point0 = line[0];
     const point1 = line[1];
     drawLine(context, point0, point1);

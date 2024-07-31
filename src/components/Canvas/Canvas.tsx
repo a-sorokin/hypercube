@@ -1,9 +1,9 @@
 import styles from './Canvas.module.scss';
 import { useEffect, useRef } from 'react';
 import { useCanvasStore } from 'canvasStore';
-import { createHypercube } from 'canvasUtils/createHypercube';
-import { drawElements } from 'canvasUtils/drawElements';
-import { initCanvas } from 'canvasUtils/initCanvas';
+import { drawElements } from 'utils/canvasUtils/drawElements';
+import { initCanvas } from 'utils/canvasUtils/initCanvas';
+import { createHypercube } from 'utils/hypercubeUtils/createHypercube';
 
 const CANVAS_SIZE = 700;
 

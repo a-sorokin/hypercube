@@ -1,5 +1,5 @@
 import { useCanvasStore } from 'canvasStore';
-import { createSquare } from 'canvasUtils/createSquare';
+import { createSquare } from 'utils/hypercubeUtils/createSquare';
 
 export const createHypercube = () => {
   const { context } = useCanvasStore.getState();

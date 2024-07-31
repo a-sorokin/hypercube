@@ -1,6 +1,6 @@
-import { drawLine } from 'canvasUtils/drawLine';
 import { SQUARE_SIZE } from 'constants/cubeConstants';
 import { Point, Square } from 'types/cubeTypes';
+import { drawLine } from 'utils/canvasUtils/drawLine';
 
 export const createSquare = (context: CanvasRenderingContext2D, { x, y }: Point) => {
   const square: Square = [

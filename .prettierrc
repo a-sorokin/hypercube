@@ -1,0 +1,22 @@
+{
+  "plugins": ["prettier-plugin-css-order", "@trivago/prettier-plugin-sort-imports"],
+
+  "printWidth": 120,
+  "singleQuote": true,
+  "trailingComma": "all",
+
+  "importOrderParserPlugins": ["classProperties", "decorators-legacy", "typescript", "jsx"],
+  "importOrder": [
+    "^.+\\.scss$",
+    "^react$",
+    "^zustand$",
+    "^mobx$",
+    "^axios$",
+    "^react-dom$",
+    "^react-router$",
+    "<THIRD_PARTY_MODULES>",
+    "^[./]"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
+}

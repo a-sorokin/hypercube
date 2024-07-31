@@ -1,1 +1,5 @@
-export const App = () => <div>hello</div>;
+import { Layout } from 'components/Layout/Layout';
+
+export const App = () => {
+  return <Layout />;
+};

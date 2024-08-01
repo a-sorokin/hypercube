@@ -6,18 +6,22 @@ type TStore = {
   canvas?: HTMLCanvasElement;
   context?: CanvasRenderingContext2D;
   dimensions: Dimensions;
+  stats: number;
 
   setCanvas: (canvas?: HTMLCanvasElement) => void;
   setContext: (context?: CanvasRenderingContext2D) => void;
 
   addDimension: () => void;
   removeDimension: () => void;
+
+  setStats: (stats: number) => void;
 };
 
 export const useCanvasStore = create<TStore>((set) => ({
   canvas: undefined,
   context: undefined,
   dimensions: [],
+  stats: 4,
 
   setCanvas: (canvas) => set({ canvas }),
   setContext: (context) => set({ context }),
@@ -35,4 +39,6 @@ export const useCanvasStore = create<TStore>((set) => ({
       return { dimensions: newDimensions };
     });
   },
+
+  setStats: (stats) => set({ stats }),
 }));

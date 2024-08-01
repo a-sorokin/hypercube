@@ -2,11 +2,11 @@ import styles from './Stats.module.scss';
 import { useCanvasStore } from 'canvasStore';
 
 export const Stats = () => {
-  const dimensions = useCanvasStore((state) => state.dimensions);
+  const stats = useCanvasStore((state) => state.stats);
 
   return (
     <div className={styles.stats}>
-      <span>{dimensions.length}</span>
+      <span>Edges: {stats}</span>
     </div>
   );
 };

@@ -3,4 +3,13 @@
   top: 20px;
   right: 20px;
   z-index: 100;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.deltas {
+  display: flex;
+  gap: 5px;
 }

@@ -1,6 +1,6 @@
 import { GeometricObject } from 'types/cubeTypes';
 
-export const createCube4 = (cube: GeometricObject, dx: number, dy: number) => {
+export const createCube = (cube: GeometricObject, dx: number, dy: number) => {
   const cube4 = structuredClone(cube);
 
   cube.forEach((line) => {
